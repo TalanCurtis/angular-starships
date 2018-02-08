@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="starships">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="app/css/master.css">
+  </head>
+  <body>
+    <nav>
+      <a ui-sref="home">Emporium</a>
+      <a ui-sref="ships">Our Ships</a>
+      <a ui-sref="ship({id:9})">Death Star</a>
+    </nav>
+
+    <ui-view> Anything that goes here gets replaced </ui-view>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" charset="utf-8"></script>
+    <script src="app/app.js"></script>
+    <script src="app/views/ships/shipsCtrl.js"></script>
+    <script src="app/views/ship/shipCtrl.js"></script>
+    <script src="app/services/shipSrvc.js"></script>
+  </body>
+</html>
