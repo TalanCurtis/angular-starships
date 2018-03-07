@@ -1,0 +1,17 @@
+<h1> Our Amazing ships </h1>
+<div ng-repeat="ship in ships">
+    <!-- {{ ship }} -->
+    <a ui-sref="ship(ship)"><h3>{{ship.name}} {{ ship.id}}</h3> </a>
+    <div>
+        {{ ship.model }}
+        <br/>
+        {{ ship.description }}
+        <br/>
+        {{ ship.cost_in_credits | currency }}
+    </div>
+</div>
+
+<!-- <div> X-Wing</div>
+<div>T-Fighter</div>
+<div>Mill</div>
+<div>Death Star</div> -->

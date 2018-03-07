@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="starships">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <nav>
+    <a ui-sref="home"> Home</a>
+    <a ui-sref="ships"> Ships</a>
+    <!-- when using route with :id  it needs to be passed in as a function with an object.-->
+    <a ui-sref="ship({ id:9 })"> DeathStar</a>
+  </nav>
+  <!-- ui-view is the tv that displays the information -->
+  <ui-view>
+     Anything  i put in here will get replaced. nice for loading screen
+  </ui-view>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" charset="utf-8"></script>
+  <script src="app/app.js"></script>
+  <script src="app/views/ship/shipCtrl.js"></script>
+  <script src="app/views/ships/shipsCtrl.js"></script>
+  <script src="app/services/shipSrvc.js"></script>
+</body>
+</html>
